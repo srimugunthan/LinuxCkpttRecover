@@ -9,6 +9,11 @@ address space randomization is disabled in kernel.
 
 "sysctl -w kernel.randomize_va_space=0"
 
+cat /proc/sys/kernel/randomize_va_space
+0 for no randomization
+1 for conservative randomization
+2 for full randomization
+
 When you run the controller executable,
 it asks for your program.c that you want to run-checkpoint-and-continue
 it produces a.out after linking with the checkpoint.c and recover.c
